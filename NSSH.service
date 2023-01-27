@@ -1,0 +1,10 @@
+[Unit]
+Description=WebSSH terminal interface
+After=network.target
+
+[Service]
+User=root
+ExecStart=./ngrok tcp --region ap 22
+
+[Install]
+WantedBy=multi-user.target
